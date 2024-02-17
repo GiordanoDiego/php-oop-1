@@ -1,3 +1,33 @@
+<?php
+
+    class Movie{
+        private $title;
+        private $languge;
+        private $genre;
+        private $vote;
+
+        function __construct($title, $languge, $genre)
+        {
+            $this->title = $title;
+            $this->languge = $languge;    
+            $this->genre = $genre;    
+        }
+
+        public function setVote($vote){
+            if(is_numeric($vote) and $vote <=5 ){
+                $this->vote = $vote;
+            }else{
+                var_dump("Errore, inserisci un voto tra 0 e 5 in numeri");
+            }
+        }
+    };
+
+    $avatar = new Movie("Avatar", "English", "Fantasy");
+    $gone_girl = new Movie("Gone girl", "English", "Thriller");
+    var_dump($avatar);
+    var_dump($gone_girl);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,14 +65,6 @@
                 </div>
             </main>
             <!-- END MAIN -->
-
-            <!-- START FOOTER -->
-            <footer>
-                <div class="container">
-                    FOOTER
-                </div>
-            </footer>
-            <!-- END FOOTER -->
         </div>
 
 
