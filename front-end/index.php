@@ -12,6 +12,15 @@
             $this->languge = $languge;    
             $this->genre = $genre;    
         }
+        public function setMultiGenre($genre1, $genre2 = "", $genre3 = "", ){
+            $this->genre .= ", ".$genre1;
+            if(strlen($genre2) > 0){
+                $this->genre .= ", ".$genre2;
+                if(strlen($genre3) > 0){
+                    $this->genre .= ", ".$genre3;
+                }
+            }
+        }
 
         public function setVote($vote){
             if(is_numeric($vote) and $vote <=5 ){
@@ -28,6 +37,7 @@
 
     $avatar = new Movie("Avatar", "English", "Fantasy");
     $gone_girl = new Movie("Gone girl", "English", "Thriller");
+    $gone_girl->setMultiGenre("Drama", "Psychological");
     // var_dump($avatar);
     // var_dump($gone_girl);
 ?>
