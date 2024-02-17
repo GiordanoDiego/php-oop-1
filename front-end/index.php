@@ -20,6 +20,10 @@
                 var_dump("Errore, inserisci un voto tra 0 e 5 in numeri");
             }
         }
+
+        public function getFullInfo(){
+            return "Titolo: ".$this->title."<br>"."Lingua: ".$this->languge."<br>"."Genere: ".$this->genre." ";
+        }
     };
 
     $avatar = new Movie("Avatar", "English", "Fantasy");
@@ -61,7 +65,18 @@
             <!-- START MAIN -->
             <main>
                 <div class="container">
-                    MAIN
+                    <div>
+                        <h3>MOVIE</h3>
+                        <hr>
+                        <div>
+                            <?php echo $avatar->getFullInfo();?>
+                            <hr>
+                        </div>
+                        <div>
+                            <?php echo $gone_girl->getFullInfo();?>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
             </main>
             <!-- END MAIN -->
