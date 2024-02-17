@@ -28,8 +28,8 @@
 
     $avatar = new Movie("Avatar", "English", "Fantasy");
     $gone_girl = new Movie("Gone girl", "English", "Thriller");
-    var_dump($avatar);
-    var_dump($gone_girl);
+    // var_dump($avatar);
+    // var_dump($gone_girl);
 ?>
 
 <!DOCTYPE html>
